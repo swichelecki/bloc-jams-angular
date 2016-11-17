@@ -1,24 +1,31 @@
 (function() {
-    function AlbumCtrl() {
+    function AlbumCtrl(Fixtures) {
         
-        this.albumTitle = albumPicasso.title;
-        this.albumArtist = albumPicasso.artist;
-        this.albumLabel = albumPicasso.label;
-        this.albumYear = albumPicasso.year;
-        this.albumCover = albumPicasso.albumArtUrl;
+        this.albumData = Fixtures.getAlbum();
+        //console.log(this.albumData);
+        //this.albumData = {};
         
-        this.albumData = [];
+     /*   this.albumTitle = albumData.title;
+        //console.log(albumData.title);
+        this.albumArtist = albumData.artist;
+        this.albumLabel = albumData.label;
+        this.albumYear = albumData.year;
+        this.albumCover = albumData.albumArtUrl; */
         
-        for (var i = 0; i < albumPicasso.songs.length; i++) {
+        //this.albumData = [];
+        //this.songs = [];
         
-            this.albumData.push(angular.copy(albumPicasso.songs[i]));    
+          //  for (var i = 0; i < this.albumData.songs.length; i++) {
         
-        }
+              // this.songs.push(this.albumData.songs[i]);  
+                //this.albumData.push(albumPicasso.songs[i]);    
+        
+          //  } 
         
     }
     
     angular
         .module('blocJams')
-        .controller('AlbumCtrl', AlbumCtrl);
+        .controller('AlbumCtrl', ['Fixtures', AlbumCtrl]);
     
 })();
