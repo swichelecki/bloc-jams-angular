@@ -39,11 +39,29 @@
             
         };
         
+        Fixtures.getCollection = function(numberOfAlbums) {
+            
+            var numAlbums = [];
+            
+                for (var i = 0; i < numberOfAlbums; i++ ) {
+                    numAlbums.push(albumPicasso);
+                }
+            
+                return numAlbums;
+            
+        };
+        
         return Fixtures;
-    }
+        
+        }
     
     angular
         .module('blocJams')
         .factory('Fixtures', Fixtures);
     
 })();
+/*
+angular.module("blocJams").controller("Test", ["Fixtures", function (Fixtures) {
+    Fixtures.getCollection(12); // [1,2,3]
+}]);
+*/
