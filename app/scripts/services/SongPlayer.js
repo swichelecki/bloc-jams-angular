@@ -83,7 +83,7 @@
         * @desc Current volume of currently playing song
         * @type {Number}
         */
-        SongPlayer.volume = 10;
+        SongPlayer.volume = 60;
         
         /**
         * @function play
